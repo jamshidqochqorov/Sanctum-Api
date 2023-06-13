@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    Http::post('https://api.telegram.org/bot5570623803:AAEhWWYH7SYQ3iQRjaEpGrh4OLvHf4JOloc/sendMessage',[
+        'chat_id'=>1814409422,
+        'text'=>'Mening ismim jamshid men beckend dasturchiman😁'
+    ]);
 });
